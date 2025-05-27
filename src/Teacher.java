@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.List;
 import java.util.Random;
 
@@ -9,7 +10,7 @@ class Teacher implements Runnable {
     public Teacher(String name, List<Group> groups) {
         this.name = name;
         this.groups = groups;
-        this.random = new Random();
+        this.random = new SecureRandom();
     }
 
     public void run() {

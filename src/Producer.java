@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Producer implements Runnable {
@@ -13,7 +14,7 @@ public class Producer implements Runnable {
             importantInfo[i] = String.valueOf(i + 1);
         }
 
-        Random random = new Random();
+        Random random = new SecureRandom();
 
         for (int i = 0;
              i < importantInfo.length;
